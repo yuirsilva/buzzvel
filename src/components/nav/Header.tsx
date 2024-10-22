@@ -18,7 +18,7 @@ const Header = () => {
                         <Link href="/configure">Configure</Link>
                     </nav>
                 </div>
-                <div className="hidden items-center gap-4 md:flex">
+                <div className="hidden items-center gap-4 xl:flex">
                     <Button variant="ghost" className="gap-4">
                         <Graphics.headset />
                         <span className="text-base text-tertiary-foreground">
