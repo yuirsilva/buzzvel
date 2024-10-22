@@ -28,10 +28,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${roboto.variable} font-sans antialiased`}>
+            <body
+                className={`${roboto.variable} flex flex-col font-sans antialiased`}
+            >
                 <Header />
-                {children}
-                <Footer />
+                <main className="flex-1 px-4 py-2 md:px-10 md:py-4 lg:px-20 lg:py-6">
+                    {children}
+                </main>
+                {/* <Footer /> */}
             </body>
         </html>
     );
