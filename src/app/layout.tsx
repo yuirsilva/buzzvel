@@ -1,10 +1,11 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 
 import Header from "@/components/nav/Header";
 import Footer from "@/components/nav/Footer";
+import { siteConfig } from "@/config/site";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -15,10 +16,39 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
     title: {
-        template: "%s | Soller",
-        default: "Soller",
+        default: siteConfig.name,
+        template: `%s | ${siteConfig.name}`,
     },
-    description: "A performant site built with Next.js",
+    description: siteConfig.description,
+    keywords: ["Next.js", "React", "Tailwind CSS", "ShadCN", "Solar panels"],
+    authors: {
+        name: "Yuri Silva",
+        url: "https://yvri.vercel.app",
+    },
+    creator: "@yidxte",
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: siteConfig.url,
+        title: siteConfig.name,
+        description: siteConfig.description,
+        siteName: siteConfig.name,
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: siteConfig.name,
+        description: siteConfig.description,
+        images: [`${siteConfig.url}/default_opengraph.png`],
+        creator: "@yidxte",
+    },
+};
+
+export const viewport: Viewport = {
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "white" },
+        { media: "(prefers-color-scheme: dark)", color: "black" },
+    ],
+    userScalable: true,
 };
 
 export default function RootLayout({
