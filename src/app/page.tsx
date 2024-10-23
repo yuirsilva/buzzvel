@@ -258,6 +258,34 @@ const Home = () => {
                     <TestimonialsCarousel />
                 </section>
             </section>
+            <section className="relative overflow-hidden bg-primary *:mx-auto lg:bg-[#7E22CE]">
+                <div className="absolute bottom-0 left-0 size-[100vh] -translate-x-1/2 translate-y-1/2 rounded-full bg-[#A855F7] md:right-0 md:top-0 md:-translate-y-1/2 md:translate-x-2/3 lg:bg-[#A252EE]"></div>
+                <div className="flex max-w-screen-2xl flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div className="text-center md:text-start">
+                        <div className="font-base font-medium leading-none text-muted-foreground md:text-xl">
+                            Get the Sun to power your home
+                        </div>
+                        <H2 className="mt-2 max-w-4xl text-balance text-[2rem] leading-none text-white md:text-[3.5rem]">
+                            All the power that you need for your house is now
+                            available
+                        </H2>
+                    </div>
+                    <div className="relative max-w-screen-2xl space-y-4 text-center">
+                        <Button variant="outline-secondary" size="lg" asChild>
+                            <Link href="/request">
+                                <span className="px-6">Request a Quote</span>
+                                <Graphics.arrowRight />
+                            </Link>
+                        </Button>
+                        <p className="text-white md:text-lg">
+                            Let&apos;s have a chat!
+                        </p>
+                    </div>
+                </div>
+                <div className="relative z-30 size-3/4">
+                    <Graphics.macbook />
+                </div>
+            </section>
         </>
     );
 };
