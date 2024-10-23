@@ -30,7 +30,7 @@ const Home = () => {
                         alt="A man installing solar panels."
                         className="pointer-events-none absolute right-0 top-0 -z-30 w-[80vw] max-w-full select-none object-fill sm:w-[60vw] md:w-[60vw] lg:w-[50vw] xl:w-[45vw] 2xl:w-[35vw]"
                     />
-                    <H1 className="mt-[70vw] text-balance pt-12 sm:mt-[60vw] md:mt-0 md:pt-0">
+                    <H1 className="mt-[70vw] pt-12 sm:mt-[60vw] md:mt-0 md:pt-0">
                         Get the Sun to <br /> Power Your Home
                     </H1>
                     <p className="max-w-96 text-balance text-lg md:max-w-screen-sm md:text-2xl">
@@ -235,7 +235,7 @@ const Home = () => {
                         <div className="font-base font-medium leading-none text-muted-foreground md:text-xl">
                             Join other Sun harvesters
                         </div>
-                        <H2 className="mt-2 text-[2rem] leading-none text-white md:text-[3.5rem]">
+                        <H2 className="mt-2 text-[2rem] leading-none text-white max-sm:mx-auto max-sm:max-w-72 md:text-[3.5rem]">
                             Make something awesome
                         </H2>
                         <p className="mt-6 max-w-4xl text-balance text-white md:text-xl md:leading-9">
@@ -259,13 +259,13 @@ const Home = () => {
                 </section>
             </section>
             <section className="relative flex-col overflow-hidden bg-primary *:mx-auto lg:bg-[#7E22CE]">
-                <div className="absolute bottom-0 left-0 size-[100vh] -translate-x-1/2 translate-y-1/2 rounded-full bg-[#A855F7] md:right-0 md:top-0 md:-translate-y-1/2 md:translate-x-2/3 lg:bg-[#A252EE]"></div>
+                <div className="absolute bottom-0 left-0 size-[60vh] -translate-x-1/2 translate-y-1/2 rounded-full bg-[#A855F7] lg:right-0 lg:top-0 lg:size-[100vh] lg:-translate-y-1/2 lg:translate-x-2/3 lg:bg-[#A252EE]"></div>
                 <div className="flex max-w-screen-2xl flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-                    <div className="text-center md:text-start">
+                    <div className="text-center lg:text-start">
                         <div className="font-base font-medium leading-none text-muted-foreground md:text-xl">
                             Get the Sun to power your home
                         </div>
-                        <H2 className="mt-2 max-w-4xl text-balance text-[2rem] leading-none text-white md:text-[3.5rem]">
+                        <H2 className="mt-2 max-w-4xl text-[2rem] leading-none text-white md:text-[3.5rem]">
                             All the power that you need for your house is now
                             available
                         </H2>
@@ -282,7 +282,7 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <div className="relative z-30 size-3/4">
+                <div className="relative z-30 size-full md:size-3/4">
                     <Graphics.macbook />
                 </div>
             </section>

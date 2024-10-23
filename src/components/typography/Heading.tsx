@@ -8,7 +8,7 @@ const H1: FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
     return (
         <h1
             className={cn(
-                "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-tight",
+                "scroll-m-20 text-balance text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-tight",
                 className
             )}
         >
@@ -24,7 +24,7 @@ const H2: FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
     return (
         <h2
             className={cn(
-                "scroll-m-20 font-extrabold tracking-tight",
+                "scroll-m-20 text-balance font-extrabold tracking-tight",
                 className
             )}
         >

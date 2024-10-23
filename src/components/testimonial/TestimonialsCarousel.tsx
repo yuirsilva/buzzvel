@@ -65,7 +65,7 @@ const TestimonialsCarousel = ({}) => {
                         <CarouselItem
                             key={index}
                             // className="pl-2 md:basis-1/2 md:pl-6 lg:basis-1/5"
-                            className="basis-full pl-2 md:basis-1/2 md:pl-6 lg:basis-[22%]"
+                            className="basis-full pl-2 md:basis-1/2 md:pl-6 lg:basis-1/3 xl:basis-[22%]"
                         >
                             <Card className="flex h-full flex-col overflow-hidden rounded-lg bg-white">
                                 <CardContent className="flex flex-grow flex-col justify-end p-8">
