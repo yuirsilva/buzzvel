@@ -71,12 +71,12 @@ const Home = () => {
                 </div>
             </section>
             <section className="flex flex-col-reverse gap-16 lg:flex-row lg:items-center xl:gap-24">
-                <div className="relative self-center lg:size-[200%] xl:size-[100%] 2xl:size-[100%]">
+                <div className="relative size-[80%] self-center sm:size-[60%] lg:size-[200%] xl:size-[100%] 2xl:size-[100%]">
                     <svg
                         viewBox="0 0 1422 750"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute left-0 top-32 -z-10 -translate-x-1/2 translate-y-1/2 -rotate-[30deg] scale-[2]"
+                        className="absolute left-0 top-12 -z-10 -translate-x-1/2 translate-y-1/2 -rotate-[30deg] scale-[2.2] md:scale-[2]"
                     >
                         <rect
                             width="1422"
