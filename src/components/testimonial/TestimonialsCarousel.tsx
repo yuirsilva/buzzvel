@@ -64,14 +64,13 @@ const TestimonialsCarousel = ({}) => {
                     {carouselItems.map((item, index) => (
                         <CarouselItem
                             key={index}
-                            // className="pl-2 md:basis-1/2 md:pl-6 lg:basis-1/5"
                             className="basis-full pl-2 md:basis-1/2 md:pl-6 lg:basis-1/3 xl:basis-[22%]"
                         >
                             <Card className="flex h-full flex-col overflow-hidden rounded-lg bg-white">
                                 <CardContent className="flex flex-grow flex-col justify-end p-8">
-                                    <p className="mb-8 mt-28 line-clamp-6 text-base md:text-lg">
+                                    <blockquote className="mb-8 mt-28 line-clamp-6 text-base md:text-lg">
                                         &quot;{item.text}&quot;
-                                    </p>
+                                    </blockquote>
                                     <div className="flex items-center">
                                         <AvatarTestimonial
                                             name={item.name}

@@ -45,15 +45,16 @@ const Home = () => {
                     </Button>
                 </section>
                 <section className="space-y-4 pb-12 md:pb-0">
-                    <p>
+                    <blockquote>
                         &quot;I was hesitant about switching to solar, but
                         Soller made the entire process effortless. Their team
                         took care of everything — from permits to installation —
                         and finished ahead of schedule.&quot;
-                    </p>
+                    </blockquote>
                     <AvatarTestimonial
-                        name="Rwanda Melflor"
+                        name="Courtney Henry"
                         text="zerowaste.com"
+                        src="/images/testimonials/CourtneyHenry.png"
                     />
                 </section>
             </section>
