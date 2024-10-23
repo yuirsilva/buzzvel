@@ -7,7 +7,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 import heroSectionImage from "@/../public/images/hero.png";
-import { Brush, Construction, Pickaxe, Smile } from "lucide-react";
+import {
+    Battery,
+    Brush,
+    Construction,
+    Pickaxe,
+    Rocket,
+    Smile,
+    Sun,
+    UtilityPole,
+} from "lucide-react";
 
 const Home = () => {
     return (
@@ -70,6 +79,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            {/*  */}
             <section className="flex flex-col-reverse gap-16 lg:flex-row lg:items-center xl:gap-24">
                 <div className="relative size-[80%] self-center sm:size-[60%] lg:size-[200%] xl:size-[100%] 2xl:size-[100%]">
                     <svg
@@ -85,7 +95,6 @@ const Home = () => {
                             className="fill-primary"
                         />
                     </svg>
-
                     <Graphics.personalizedServices />
                 </div>
                 <section className="flex flex-col gap-16">
@@ -144,6 +153,80 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
+            </section>
+            <section className="flex flex-col gap-16 lg:flex-row lg:items-center xl:gap-24">
+                <section className="flex flex-col gap-16">
+                    <div className="text-center md:text-start">
+                        <div className="font-base font-medium leading-none text-secondary-foreground md:text-xl">
+                            System features
+                        </div>
+                        <H2 className="mt-2 text-[2rem] leading-none md:text-[3.5rem]">
+                            Powerful features
+                        </H2>
+                        <p className="mt-6 max-w-4xl text-balance md:text-xl md:leading-9">
+                            Features that don&apos;t let a single ray of sun go
+                            to waste.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-12 *:flex *:flex-col *:items-center *:gap-4 *:text-center max-[320px]:grid-cols-1 *:md:items-start *:md:text-start [&_p]:text-balance md:[&_p]:text-lg">
+                        <div>
+                            <Sun />
+                            <H3>Smart Home Integration</H3>
+                            <p>
+                                Through our user-friendly mobile app, monitor
+                                your energy production in real-time, track
+                                savings, and adjust settings from anywhere in
+                                the world.
+                            </p>
+                        </div>
+                        <div>
+                            <Battery />
+                            <H3>Battery Storage Solutions</H3>
+                            <p>
+                                Our advanced battery storage systems capture
+                                excess daytime energy for use during nighttime
+                                or cloudy periods, making you less dependent on
+                                the grid.
+                            </p>
+                        </div>
+                        <div>
+                            <UtilityPole />
+                            <H3>Performance Guarantee</H3>
+                            <p>
+                                If your solar installation produces less energy
+                                than our projections, we&apos;ll compensate you
+                                for the difference.
+                            </p>
+                        </div>
+                        <div>
+                            <Rocket />
+                            <H3>Future-Ready Design</H3>
+                            <p>
+                                We design every installation with future
+                                expansion in mind, whether you&apos;re planning
+                                to add an electric vehicle, increase your living
+                                space, or integrate new energy-saving
+                                technologies.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <div className="relative size-[60%] self-center sm:size-[60%] lg:size-[200%] xl:size-[60%]">
+                    <svg
+                        viewBox="0 0 1422 750"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="absolute right-0 top-12 -z-10 translate-x-1/3 translate-y-1/2 -rotate-[30deg] scale-[2.2] md:scale-[2]"
+                    >
+                        <rect
+                            width="1422"
+                            height="750"
+                            rx="375"
+                            className="fill-[#FBBF24]"
+                        />
+                    </svg>
+                    <Graphics.powerfulFeatures />
+                </div>
             </section>
         </>
     );
