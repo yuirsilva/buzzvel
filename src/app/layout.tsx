@@ -32,7 +32,7 @@ export default function RootLayout({
                 className={`${roboto.variable} flex flex-col font-sans antialiased`}
             >
                 <Header />
-                <main className="flex-1 overflow-hidden *:px-4 *:py-12 *:md:px-10 *:lg:px-20 *:lg:py-20">
+                <main className="flex-1 overflow-hidden *:flex *:gap-16 *:px-4 *:py-12 *:md:gap-20 *:md:p-20">
                     {children}
                 </main>
                 <Footer />

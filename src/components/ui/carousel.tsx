@@ -217,7 +217,7 @@ const CarouselPrevious = React.forwardRef<
             onClick={scrollPrev}
             {...props}
         >
-            <ArrowLeft className="size-6" />
+            <ArrowLeft className="size-6 fill-none" />
             <span className="sr-only">Previous slide</span>
         </Button>
     );

@@ -22,7 +22,7 @@ import TestimonialsCarousel from "@/components/testimonial/TestimonialsCarousel"
 const Home = () => {
     return (
         <>
-            <section className="flex w-full flex-col gap-16 pb-12 md:gap-32 md:pb-20 md:*:max-w-xl">
+            <section className="w-full flex-col gap-16 pb-12 md:gap-32 md:pb-20 md:*:max-w-xl">
                 <section className="flex flex-col items-center justify-center gap-6 text-center md:items-start md:text-start">
                     <Image
                         priority
@@ -58,7 +58,7 @@ const Home = () => {
                 </section>
             </section>
             {/*  */}
-            <section className="flex flex-col items-center justify-center gap-16 md:gap-20">
+            <section className="flex-col items-center justify-center gap-16 md:gap-20">
                 <div className="flex flex-col items-center">
                     <div className="font-base font-medium leading-none text-secondary-foreground md:text-xl">
                         No more waste
@@ -81,13 +81,13 @@ const Home = () => {
                 </div>
             </section>
             {/*  */}
-            <section className="flex flex-col-reverse gap-16 lg:flex-row lg:items-center xl:gap-24">
+            <section className="flex-col-reverse gap-16 lg:flex-row lg:items-center xl:gap-24">
                 <div className="relative size-[80%] self-center sm:size-[60%] lg:size-[200%] xl:size-[100%] 2xl:size-[100%]">
                     <svg
                         viewBox="0 0 1422 750"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute left-0 top-12 -z-10 -translate-x-1/2 translate-y-1/2 -rotate-[30deg] scale-[2.2] md:scale-[2]"
+                        className="absolute left-0 top-24 -z-10 -translate-x-1/2 translate-y-1/2 -rotate-[30deg] scale-[2.2] md:scale-[2]"
                     >
                         <rect
                             width="1422"
@@ -155,7 +155,7 @@ const Home = () => {
                     </div>
                 </section>
             </section>
-            <section className="flex flex-col gap-16 lg:flex-row lg:items-center xl:gap-24">
+            <section className="flex-col lg:flex-row lg:items-center xl:gap-24">
                 <section className="flex flex-col gap-16">
                     <div className="text-center md:text-start">
                         <div className="font-base font-medium leading-none text-secondary-foreground md:text-xl">
@@ -229,7 +229,7 @@ const Home = () => {
                     <Graphics.powerfulFeatures />
                 </div>
             </section>
-            <section className="flex flex-col gap-16 bg-primary py-12 md:gap-20 md:py-20">
+            <section className="flex-col gap-16 bg-primary py-12 md:gap-20 md:py-20">
                 <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
                     <div className="text-center md:text-start">
                         <div className="font-base font-medium leading-none text-muted-foreground md:text-xl">
@@ -258,7 +258,7 @@ const Home = () => {
                     <TestimonialsCarousel />
                 </section>
             </section>
-            <section className="relative overflow-hidden bg-primary *:mx-auto lg:bg-[#7E22CE]">
+            <section className="relative flex-col overflow-hidden bg-primary *:mx-auto lg:bg-[#7E22CE]">
                 <div className="absolute bottom-0 left-0 size-[100vh] -translate-x-1/2 translate-y-1/2 rounded-full bg-[#A855F7] md:right-0 md:top-0 md:-translate-y-1/2 md:translate-x-2/3 lg:bg-[#A252EE]"></div>
                 <div className="flex max-w-screen-2xl flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                     <div className="text-center md:text-start">

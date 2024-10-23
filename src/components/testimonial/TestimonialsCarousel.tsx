@@ -85,8 +85,14 @@ const TestimonialsCarousel = ({}) => {
                     ))}
                 </CarouselContent>
                 <div className="mt-16 flex justify-center gap-6 md:mr-10 md:mt-20 lg:mr-20 lg:justify-start">
-                    <CarouselPrevious className="relative inset-0 translate-y-0 border-2 border-muted-foreground text-muted-foreground hover:bg-muted-foreground/20" />
-                    <CarouselNext className="relative inset-0 translate-y-0 border-2 border-muted-foreground text-muted-foreground hover:bg-muted-foreground/20" />
+                    <CarouselPrevious
+                        variant="outline-secondary"
+                        className="relative inset-0 translate-y-0 [&_svg_path]:fill-none [&_svg_path]:hover:fill-none [&_svg_path]:hover:text-accent-foreground"
+                    />
+                    <CarouselNext
+                        variant="outline-secondary"
+                        className="relative inset-0 translate-y-0 [&_svg_path]:fill-none [&_svg_path]:hover:fill-none [&_svg_path]:hover:text-accent-foreground"
+                    />
                 </div>
             </Carousel>
         </div>
