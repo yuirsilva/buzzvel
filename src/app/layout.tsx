@@ -16,8 +16,8 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
     title: {
+        template: `%s — ${siteConfig.name}`,
         default: siteConfig.name,
-        template: `%s | ${siteConfig.name}`,
     },
     description: siteConfig.description,
     keywords: ["Next.js", "React", "Tailwind CSS", "ShadCN", "Solar panels"],

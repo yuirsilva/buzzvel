@@ -1,12 +1,13 @@
-import { H1, H2, H3 } from "@/components/typography/Heading";
 import Graphics from "@/components/Graphics";
-import { Button } from "@/components/ui/button";
 import AvatarTestimonial from "@/components/testimonial/Avatar";
+import { H1, H2, H3 } from "@/components/typography/Heading";
+import { Button } from "@/components/ui/button";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 import heroSectionImage from "@/../public/images/hero.png";
+import TestimonialsCarousel from "@/components/testimonial/TestimonialsCarousel";
 import {
     Battery,
     Brush,
@@ -17,7 +18,11 @@ import {
     Sun,
     UtilityPole,
 } from "lucide-react";
-import TestimonialsCarousel from "@/components/testimonial/TestimonialsCarousel";
+
+export const metadata = {
+    // metadata.title.template doesnt seem to be working
+    title: "Home — Soller",
+};
 
 const Home = () => {
     return (
