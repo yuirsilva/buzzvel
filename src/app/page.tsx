@@ -1,4 +1,4 @@
-import { H1, H2 } from "@/components/typography/Heading";
+import { H1, H2, H3 } from "@/components/typography/Heading";
 import Graphics from "@/components/Graphics";
 import { Button } from "@/components/ui/button";
 import AvatarTestimonial from "@/components/testimonial/Avatar";
@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import heroSectionImage from "@/../public/images/hero.png";
+import { Brush, Construction, Pickaxe, Smile } from "lucide-react";
 
 const Home = () => {
     return (
@@ -68,6 +69,81 @@ const Home = () => {
                         <Graphics.pickthesun />
                     </div>
                 </div>
+            </section>
+            <section className="flex flex-col-reverse gap-16 lg:flex-row lg:items-center xl:gap-24">
+                <div className="relative self-center lg:size-[200%] xl:size-[100%] 2xl:size-[100%]">
+                    <svg
+                        viewBox="0 0 1422 750"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="absolute left-0 top-32 -z-10 -translate-x-1/2 translate-y-1/2 -rotate-[30deg] scale-[2]"
+                    >
+                        <rect
+                            width="1422"
+                            height="750"
+                            rx="375"
+                            className="fill-primary"
+                        />
+                    </svg>
+
+                    <Graphics.personalizedServices />
+                </div>
+                <section className="flex flex-col gap-16">
+                    <div className="text-center md:text-start">
+                        <div className="font-base font-medium leading-none text-secondary-foreground md:text-xl">
+                            Services
+                        </div>
+                        <H2 className="mt-2 text-[2rem] leading-none md:text-[3.5rem]">
+                            Personalized services
+                        </H2>
+                        <p className="mt-6 max-w-4xl text-balance md:text-xl md:leading-9">
+                            Our expert team crafts a customized solar system
+                            that maximizes your roof&apos;s potential and
+                            minimizes your energy costs.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-12 *:flex *:flex-col *:items-center *:gap-4 *:text-center max-[320px]:grid-cols-1 *:md:items-start *:md:text-start [&_p]:text-balance md:[&_p]:text-lg">
+                        <div>
+                            <Brush />
+                            <H3>Consultation & Custom Design</H3>
+                            <p>
+                                Our expert engineers analyze your roof&apos;s
+                                orientation, shade patterns, and structural
+                                integrity, while studying your energy
+                                consumption habits and future needs.
+                            </p>
+                        </div>
+                        <div>
+                            <Pickaxe />
+                            <H3>Professional Installation</H3>
+                            <p>
+                                Our certified installation team, with over three
+                                decades of experience in Mallorca&apos;s unique
+                                architectural landscape, handles everything with
+                                meticulous care.
+                            </p>
+                        </div>
+                        <div>
+                            <Construction />
+                            <H3>Maintenance & Monitoring</H3>
+                            <p>
+                                Our comprehensive maintenance program includes
+                                bi-annual system inspections, performance
+                                monitoring, and professional cleaning to keep
+                                your panels operating at peak efficiency.
+                            </p>
+                        </div>
+                        <div>
+                            <Smile />
+                            <H3>Technical Support & Upgrades</H3>
+                            <p>
+                                Our technical support team is available 24/7 to
+                                address any concerns or questions you might
+                                have.
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </section>
         </>
     );

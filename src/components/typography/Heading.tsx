@@ -33,4 +33,20 @@ const H2: FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
     );
 };
 
-export { H1, H2 };
+const H3: FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
+    children,
+    className,
+}) => {
+    return (
+        <h3
+            className={cn(
+                "scroll-m-20 text-xl font-bold tracking-tight md:text-2xl",
+                className
+            )}
+        >
+            {children}
+        </h3>
+    );
+};
+
+export { H1, H2, H3 };
