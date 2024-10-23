@@ -20,9 +20,9 @@ const buttonVariants = cva(
                 ghost: "hover:bg-accent hover:text-accent-foreground",
                 // link: "text-primary underline-offset-4 hover:underline",
                 outline:
-                    "border border-2 border-primary text-primary hover:bg-primary/20",
+                    "border border-2 border-primary text-primary hover:bg-primary hover:text-muted-foreground [&_svg_path]:hover:fill-muted-foreground",
                 "outline-secondary":
-                    "border border-2 border-muted-foreground text-muted-foreground hover:bg-muted-foreground/20 [&_svg_path]:fill-muted-foreground",
+                    "border border-2 border-muted-foreground text-muted-foreground hover:bg-muted-foreground hover:text-accent-foreground [&_svg_path]:hover:fill-accent-foreground [&_svg_path]:fill-muted-foreground",
             },
             size: {
                 default: "h-10 px-4 py-2",
