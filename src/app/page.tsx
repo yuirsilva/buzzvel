@@ -17,11 +17,12 @@ import {
     Sun,
     UtilityPole,
 } from "lucide-react";
+import TestimonialsCarousel from "@/components/testimonial/TestimonialsCarousel";
 
 const Home = () => {
     return (
         <>
-            <section className="flex max-w-screen-lg flex-col gap-16 md:gap-32 md:*:max-w-xl">
+            <section className="flex w-full flex-col gap-16 pb-12 md:gap-32 md:pb-20 md:*:max-w-xl">
                 <section className="flex flex-col items-center justify-center gap-6 text-center md:items-start md:text-start">
                     <Image
                         priority
@@ -227,6 +228,35 @@ const Home = () => {
                     </svg>
                     <Graphics.powerfulFeatures />
                 </div>
+            </section>
+            <section className="flex flex-col gap-16 bg-primary py-12 md:gap-20 md:py-20">
+                <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
+                    <div className="text-center md:text-start">
+                        <div className="font-base font-medium leading-none text-muted-foreground md:text-xl">
+                            Join other Sun harvesters
+                        </div>
+                        <H2 className="mt-2 text-[2rem] leading-none text-white md:text-[3.5rem]">
+                            Make something awesome
+                        </H2>
+                        <p className="mt-6 max-w-4xl text-balance text-white md:text-xl md:leading-9">
+                            Join the growing community of Mallorca homeowners
+                            who&apos;ve discovered the power of possibility.
+                            From charming townhouses in Pollença to modern
+                            villas in Puerto Portals, over 1,000 families are
+                            already harvesting the Mediterranean sun with
+                            Soller.
+                        </p>
+                    </div>
+                    <Button variant="outline-secondary" size="lg" asChild>
+                        <Link href="/request">
+                            <span className="px-6">Request a Quote</span>
+                            <Graphics.arrowRight />
+                        </Link>
+                    </Button>
+                </div>
+                <section className="md:-mr-10 lg:-mr-20">
+                    <TestimonialsCarousel />
+                </section>
             </section>
         </>
     );

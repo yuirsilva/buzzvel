@@ -5,33 +5,27 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface AvatarProps {
     name: string;
     text: string;
+    src?: string;
 }
 
-const getInitials = (fullName: string) => {
-    const allNames = fullName.trim().split(" ");
-    const initials = allNames.reduce((acc, curr, index) => {
-        if (index === 0 || index === allNames.length - 1) {
-            acc = `${acc}${curr.charAt(0).toUpperCase()}`;
-        }
-        return acc;
-    }, "");
-
-    return initials;
-};
-
-const AvatarTestimonial: FC<AvatarProps> = ({ name, text }) => {
-    const initials = getInitials(name);
+const AvatarTestimonial: FC<AvatarProps> = ({
+    name,
+    text,
+    src = "https://github.com/shadcn.png",
+}) => {
     return (
         <div className="flex items-center gap-4">
             <Avatar>
-                <AvatarImage
-                    src="https://github.com/shadcn.png"
-                    alt="@shadcn"
-                />
-                <AvatarFallback>{initials}</AvatarFallback>
+                <AvatarImage src={src} alt={`${name} testimonial`} />
+                <AvatarFallback>
+                    {name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                </AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-                <p>{name}</p>
+                <p className="text-base md:text-lg">{name}</p>
                 <p className="text-slate-600">{text}</p>
             </div>
         </div>
