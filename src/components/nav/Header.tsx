@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import Graphics from "@/components/Graphics";
 import { Button } from "@/components/ui/button";
+import NavLink from "@/components/nav/NavLink";
 
 const Header = () => {
     return (
@@ -12,10 +13,10 @@ const Header = () => {
                         Soller
                     </Link>
                     <nav className="hidden items-center gap-4 font-medium md:flex">
-                        <Link href="/products">Products</Link>
-                        <Link href="/solutions">Solutions</Link>
-                        <Link href="/services">Services</Link>
-                        <Link href="/configure">Configure</Link>
+                        <NavLink href="/products">Products</NavLink>
+                        <NavLink href="/solutions">Solutions</NavLink>
+                        <NavLink href="/services">Services</NavLink>
+                        <NavLink href="/configure">Configure</NavLink>
                     </nav>
                 </div>
                 <div className="hidden items-center gap-4 xl:flex">

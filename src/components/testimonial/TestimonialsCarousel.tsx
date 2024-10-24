@@ -73,6 +73,7 @@ const TestimonialsCarousel = ({}) => {
                                     </blockquote>
                                     <div className="flex items-center">
                                         <AvatarTestimonial
+                                            loading="lazy"
                                             name={item.name}
                                             text={`${item.consumption}KWh`}
                                             src={item.avatar}

@@ -3,6 +3,8 @@ import AvatarTestimonial from "@/components/testimonial/Avatar";
 import { H1, H2, H3 } from "@/components/typography/Heading";
 import { Button } from "@/components/ui/button";
 
+import * as m from "framer-motion/client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,6 +20,7 @@ import {
     Sun,
     UtilityPole,
 } from "lucide-react";
+import { opacityVariants } from "@/lib/motion";
 
 export const metadata = {
     // metadata.title.template doesnt seem to be working
@@ -35,21 +38,36 @@ const Home = () => {
                         alt="A man installing solar panels."
                         className="pointer-events-none absolute right-0 top-0 -z-30 w-[80vw] max-w-full select-none object-fill sm:w-[60vw] md:w-[60vw] lg:w-[50vw] xl:w-[45vw] 2xl:w-[35vw]"
                     />
-                    <H1 className="mt-[70vw] pt-12 sm:mt-[60vw] md:mt-0 md:pt-0">
-                        Get the Sun to <br /> Power Your Home
-                    </H1>
-                    <p className="max-w-96 text-balance text-lg md:max-w-screen-sm md:text-2xl">
-                        Mallorca&apos;s most trusted solar installation team
-                        powering island homes for over 30 years.
-                    </p>
-                    <Button variant="outline" size="lg" asChild>
-                        <Link href="/request">
-                            <span className="px-6">Request a Quote</span>
-                            <Graphics.arrowRight />
-                        </Link>
-                    </Button>
+                    <H1
+                        text="Get the Sun to Power Your Home"
+                        className="mt-[70vw] pt-12 sm:mt-[60vw] md:mt-0 md:pt-0"
+                    ></H1>
+                    <m.div
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ amount: 0.1, once: true }}
+                        className="space-y-6"
+                        variants={opacityVariants}
+                    >
+                        <p className="max-w-96 text-balance text-lg md:max-w-screen-sm md:text-2xl">
+                            Mallorca&apos;s most trusted solar installation team
+                            powering island homes for over 30 years.
+                        </p>
+                        <Button variant="outline" size="lg" asChild>
+                            <Link href="/request">
+                                <span className="px-6">Request a Quote</span>
+                                <Graphics.arrowRight />
+                            </Link>
+                        </Button>
+                    </m.div>
                 </section>
-                <section className="space-y-4 pb-12 md:pb-0">
+                <m.section
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ amount: 0.1, once: true }}
+                    variants={opacityVariants}
+                    className="space-y-4 pb-12 md:pb-0"
+                >
                     <blockquote>
                         &quot;I was hesitant about switching to solar, but
                         Soller made the entire process effortless. Their team
@@ -61,11 +79,21 @@ const Home = () => {
                         text="zerowaste.com"
                         src="/images/testimonials/CourtneyHenry.png"
                     />
-                </section>
+                </m.section>
             </section>
             {/*  */}
-            <section className="flex-col items-center justify-center gap-16 md:gap-20">
-                <div className="flex flex-col items-center">
+            <m.section
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ amount: 0.4, once: true }}
+                transition={{ staggerChildren: 0.7 }}
+                className="flex-col items-center justify-center gap-16 md:gap-20"
+            >
+                <m.div
+                    variants={opacityVariants}
+                    viewport={{ amount: 0.4, once: true }}
+                    className="flex flex-col items-center"
+                >
                     <div className="font-base font-medium leading-none text-secondary-foreground md:text-xl">
                         No more waste
                     </div>
@@ -77,18 +105,31 @@ const Home = () => {
                         abundant gift - turning those golden Mallorcan rays into
                         clean, reliable energy for your home.
                     </p>
-                </div>
-                <div className="relative flex w-full justify-center">
+                </m.div>
+                <m.div
+                    variants={opacityVariants}
+                    viewport={{ amount: 0.4, once: true }}
+                    className="relative flex w-full justify-center"
+                >
                     <div className="absolute left-0 top-[10vw] -z-10 size-[40vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f59e0b]"></div>
                     <div className="absolute right-0 top-[10vw] -z-10 size-[25vw] -translate-y-1/2 translate-x-1/2 rounded-full bg-[#7e22ce]"></div>
                     <div className="size-[90%]">
                         <Graphics.pickthesun />
                     </div>
-                </div>
-            </section>
+                </m.div>
+            </m.section>
             {/*  */}
-            <section className="flex-col-reverse gap-16 lg:flex-row lg:items-center xl:gap-24">
-                <div className="relative size-[80%] self-center sm:size-[60%] lg:size-[200%] xl:size-[100%] 2xl:size-[100%]">
+            <m.section
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ staggerChildren: 0.09 }}
+                className="flex-col-reverse gap-16 lg:flex-row lg:items-center xl:gap-24"
+            >
+                <m.div
+                    variants={opacityVariants}
+                    className="relative size-[80%] self-center sm:size-[60%] lg:size-[200%] xl:size-[100%] 2xl:size-[100%]"
+                >
                     <svg
                         viewBox="0 0 1422 750"
                         fill="none"
@@ -103,9 +144,12 @@ const Home = () => {
                         />
                     </svg>
                     <Graphics.personalizedServices />
-                </div>
+                </m.div>
                 <section className="flex flex-col gap-16">
-                    <div className="text-center md:text-start">
+                    <m.div
+                        variants={opacityVariants}
+                        className="text-center md:text-start"
+                    >
                         <div className="font-base font-medium leading-none text-secondary-foreground md:text-xl">
                             Services
                         </div>
@@ -117,9 +161,9 @@ const Home = () => {
                             that maximizes your roof&apos;s potential and
                             minimizes your energy costs.
                         </p>
-                    </div>
+                    </m.div>
                     <div className="grid grid-cols-2 gap-12 *:flex *:flex-col *:items-center *:gap-4 *:text-center max-[320px]:grid-cols-1 *:md:items-start *:md:text-start [&_p]:text-balance md:[&_p]:text-lg">
-                        <div>
+                        <m.div variants={opacityVariants}>
                             <Brush />
                             <H3>Consultation & Custom Design</H3>
                             <p>
@@ -128,8 +172,8 @@ const Home = () => {
                                 integrity, while studying your energy
                                 consumption habits and future needs.
                             </p>
-                        </div>
-                        <div>
+                        </m.div>
+                        <m.div variants={opacityVariants}>
                             <Pickaxe />
                             <H3>Professional Installation</H3>
                             <p>
@@ -138,8 +182,8 @@ const Home = () => {
                                 architectural landscape, handles everything with
                                 meticulous care.
                             </p>
-                        </div>
-                        <div>
+                        </m.div>
+                        <m.div variants={opacityVariants}>
                             <Construction />
                             <H3>Maintenance & Monitoring</H3>
                             <p>
@@ -148,8 +192,8 @@ const Home = () => {
                                 monitoring, and professional cleaning to keep
                                 your panels operating at peak efficiency.
                             </p>
-                        </div>
-                        <div>
+                        </m.div>
+                        <m.div variants={opacityVariants}>
                             <Smile />
                             <H3>Technical Support & Upgrades</H3>
                             <p>
@@ -157,13 +201,22 @@ const Home = () => {
                                 address any concerns or questions you might
                                 have.
                             </p>
-                        </div>
+                        </m.div>
                     </div>
                 </section>
-            </section>
-            <section className="flex-col lg:flex-row lg:items-center xl:gap-24">
+            </m.section>
+            <m.section
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ staggerChildren: 0.09 }}
+                className="flex-col lg:flex-row lg:items-center xl:gap-24"
+            >
                 <section className="flex flex-col gap-16">
-                    <div className="text-center md:text-start">
+                    <m.div
+                        variants={opacityVariants}
+                        className="text-center md:text-start"
+                    >
                         <div className="font-base font-medium leading-none text-secondary-foreground md:text-xl">
                             System features
                         </div>
@@ -174,9 +227,9 @@ const Home = () => {
                             Features that don&apos;t let a single ray of sun go
                             to waste.
                         </p>
-                    </div>
+                    </m.div>
                     <div className="grid grid-cols-2 gap-12 *:flex *:flex-col *:items-center *:gap-4 *:text-center max-[320px]:grid-cols-1 *:md:items-start *:md:text-start [&_p]:text-balance md:[&_p]:text-lg">
-                        <div>
+                        <m.div variants={opacityVariants}>
                             <Sun />
                             <H3>Smart Home Integration</H3>
                             <p>
@@ -185,8 +238,8 @@ const Home = () => {
                                 savings, and adjust settings from anywhere in
                                 the world.
                             </p>
-                        </div>
-                        <div>
+                        </m.div>
+                        <m.div variants={opacityVariants}>
                             <Battery />
                             <H3>Battery Storage Solutions</H3>
                             <p>
@@ -195,8 +248,8 @@ const Home = () => {
                                 or cloudy periods, making you less dependent on
                                 the grid.
                             </p>
-                        </div>
-                        <div>
+                        </m.div>
+                        <m.div variants={opacityVariants}>
                             <UtilityPole />
                             <H3>Performance Guarantee</H3>
                             <p>
@@ -204,8 +257,8 @@ const Home = () => {
                                 than our projections, we&apos;ll compensate you
                                 for the difference.
                             </p>
-                        </div>
-                        <div>
+                        </m.div>
+                        <m.div variants={opacityVariants}>
                             <Rocket />
                             <H3>Future-Ready Design</H3>
                             <p>
@@ -215,7 +268,7 @@ const Home = () => {
                                 space, or integrate new energy-saving
                                 technologies.
                             </p>
-                        </div>
+                        </m.div>
                     </div>
                 </section>
                 <div className="relative size-[60%] self-center sm:size-[60%] lg:size-[200%] xl:size-[60%]">
@@ -234,9 +287,18 @@ const Home = () => {
                     </svg>
                     <Graphics.powerfulFeatures />
                 </div>
-            </section>
-            <section className="flex-col gap-16 bg-primary py-12 md:gap-20 md:py-20">
-                <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
+            </m.section>
+            <m.section
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ amount: 0.4, once: true }}
+                transition={{ once: true, staggerChildren: 0.09 }}
+                className="flex-col gap-16 bg-primary py-12 md:gap-20 md:py-20"
+            >
+                <m.div
+                    variants={opacityVariants}
+                    className="flex flex-col items-center gap-6 md:items-start lg:flex-row lg:justify-between"
+                >
                     <div className="text-center md:text-start">
                         <div className="font-base font-medium leading-none text-muted-foreground md:text-xl">
                             Join other Sun harvesters
@@ -259,14 +321,26 @@ const Home = () => {
                             <Graphics.arrowRight />
                         </Link>
                     </Button>
-                </div>
-                <section className="md:-mr-10 lg:-mr-20">
+                </m.div>
+                <m.section
+                    variants={opacityVariants}
+                    className="md:-mr-10 lg:-mr-20"
+                >
                     <TestimonialsCarousel />
-                </section>
-            </section>
-            <section className="relative flex-col overflow-hidden bg-primary *:mx-auto lg:bg-[#7E22CE]">
+                </m.section>
+            </m.section>
+            <m.section
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ amount: 0.4, once: true }}
+                transition={{ once: true, staggerChildren: 0.09 }}
+                className="relative flex-col overflow-hidden bg-primary *:mx-auto lg:bg-[#7E22CE]"
+            >
                 <div className="absolute bottom-0 left-0 size-[60vh] -translate-x-1/2 translate-y-1/2 rounded-full bg-[#A855F7] lg:right-0 lg:top-0 lg:size-[100vh] lg:-translate-y-1/2 lg:translate-x-2/3 lg:bg-[#A252EE]"></div>
-                <div className="flex max-w-screen-2xl flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                <m.div
+                    variants={opacityVariants}
+                    className="flex max-w-screen-2xl flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+                >
                     <div className="text-center lg:text-start">
                         <div className="font-base font-medium leading-none text-muted-foreground md:text-xl">
                             Get the Sun to power your home
@@ -287,11 +361,14 @@ const Home = () => {
                             Let&apos;s have a chat!
                         </p>
                     </div>
-                </div>
-                <div className="relative z-30 size-full md:size-3/4">
+                </m.div>
+                <m.div
+                    variants={opacityVariants}
+                    className="relative z-30 size-full md:size-3/4"
+                >
                     <Graphics.macbook />
-                </div>
-            </section>
+                </m.div>
+            </m.section>
         </>
     );
 };

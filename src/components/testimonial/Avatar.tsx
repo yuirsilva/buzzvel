@@ -6,17 +6,23 @@ interface AvatarProps {
     name: string;
     text: string;
     src?: string;
+    loading?: "eager" | "lazy";
 }
 
 const AvatarTestimonial: FC<AvatarProps> = ({
     name,
     text,
     src = "https://github.com/shadcn.png",
+    loading = "eager",
 }) => {
     return (
         <div className="flex items-center gap-4">
             <Avatar>
-                <AvatarImage src={src} alt={`${name} testimonial`} />
+                <AvatarImage
+                    loading={loading}
+                    src={src}
+                    alt={`${name} testimonial`}
+                />
                 <AvatarFallback>
                     {name
                         .split(" ")

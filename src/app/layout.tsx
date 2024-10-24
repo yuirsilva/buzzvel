@@ -3,8 +3,8 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 
-import Header from "@/components/nav/Header";
 import Footer from "@/components/nav/Footer";
+import Header from "@/components/nav/Header";
 import { siteConfig } from "@/config/site";
 
 const roboto = Roboto({
