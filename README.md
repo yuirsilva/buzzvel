@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soller ☀️
 
-## Getting Started
+Buzzvel challenge project
 
-First, run the development server:
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+## 🚀 Features
+
+-   Next.js 15 (with React Compiler)
+-   React Server Components
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+-   Node.js (v14 or higher)
+-   npm (Node Package Manager)
+
+## 🛠 Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yuirsilva/buzzvel.git
+cd buzzvel
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install --force
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the server:
 
-## Learn More
+```bash
+npm run dev  # for development
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👏 Acknowledgments
 
-## Deploy on Vercel
+-   [Next.js](https://nextjs.org/) - The web framework used
+-   [React](https://react.dev/) - The library used
+-   [shadcn](https://ui.shadcn.com/) - Components library
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📞 Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For support and questions:
+
+-   📧 Email: yuxipersonal@gmail.com
