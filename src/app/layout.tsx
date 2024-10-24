@@ -3,10 +3,10 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 
+import MotionWrapper from "@/components/MotionWrapper";
 import Footer from "@/components/nav/Footer";
 import Header from "@/components/nav/Header";
 import { siteConfig } from "@/config/site";
-import { LazyMotion } from "framer-motion";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -52,26 +52,22 @@ export const viewport: Viewport = {
     userScalable: true,
 };
 
-export default async function RootLayout({
+export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const loadFeatures = await import("@/lib/features").then(
-        (res) => res.default
-    );
-
     return (
         <html lang="en">
             <body
                 className={`${roboto.variable} flex flex-col font-sans antialiased`}
             >
                 <Header />
-                <LazyMotion features={loadFeatures}>
+                <MotionWrapper>
                     <main className="flex-1 overflow-hidden *:flex *:gap-16 *:px-4 *:py-12 *:md:gap-20 *:md:p-20">
                         {children}
                     </main>
-                </LazyMotion>
+                </MotionWrapper>
                 <Footer />
             </body>
         </html>
