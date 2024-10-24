@@ -26,7 +26,7 @@ git clone https://github.com/yuirsilva/buzzvel.git
 cd buzzvel
 ```
 
-2. Install dependencies:
+2. Install dependencies (--force due to React Compiler):
 
 ```bash
 npm install --force
