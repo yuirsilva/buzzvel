@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import Footer from "@/components/nav/Footer";
 import Header from "@/components/nav/Header";
 import { siteConfig } from "@/config/site";
+import { domAnimation, LazyMotion } from "framer-motion";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -62,9 +63,11 @@ export default function RootLayout({
                 className={`${roboto.variable} flex flex-col font-sans antialiased`}
             >
                 <Header />
-                <main className="flex-1 overflow-hidden *:flex *:gap-16 *:px-4 *:py-12 *:md:gap-20 *:md:p-20">
-                    {children}
-                </main>
+                <LazyMotion features={domAnimation}>
+                    <main className="flex-1 overflow-hidden *:flex *:gap-16 *:px-4 *:py-12 *:md:gap-20 *:md:p-20">
+                        {children}
+                    </main>
+                </LazyMotion>
                 <Footer />
             </body>
         </html>

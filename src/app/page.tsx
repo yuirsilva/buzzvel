@@ -3,7 +3,7 @@ import AvatarTestimonial from "@/components/testimonial/Avatar";
 import { H1, H2, H3 } from "@/components/typography/Heading";
 import { Button } from "@/components/ui/button";
 
-import * as m from "framer-motion/client";
+import * as m from "framer-motion/m";
 
 import Image from "next/image";
 import Link from "next/link";
