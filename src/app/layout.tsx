@@ -6,7 +6,7 @@ import { Roboto } from "next/font/google";
 import Footer from "@/components/nav/Footer";
 import Header from "@/components/nav/Header";
 import { siteConfig } from "@/config/site";
-import { domAnimation, LazyMotion } from "framer-motion";
+import { LazyMotion } from "framer-motion";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -52,18 +52,22 @@ export const viewport: Viewport = {
     userScalable: true,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const loadFeatures = await import("@/lib/features").then(
+        (res) => res.default
+    );
+
     return (
         <html lang="en">
             <body
                 className={`${roboto.variable} flex flex-col font-sans antialiased`}
             >
                 <Header />
-                <LazyMotion features={domAnimation}>
+                <LazyMotion features={loadFeatures}>
                     <main className="flex-1 overflow-hidden *:flex *:gap-16 *:px-4 *:py-12 *:md:gap-20 *:md:p-20">
                         {children}
                     </main>
