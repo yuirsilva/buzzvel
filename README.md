@@ -2,9 +2,6 @@
 
 Buzzvel challenge project
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-
 ## 🚀 Features
 
 -   Next.js 15 (with React Compiler)
@@ -38,18 +35,14 @@ npm install --force
 npm run dev  # for development
 ```
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
 ## 👏 Acknowledgments
 
 -   [Next.js](https://nextjs.org/) - The web framework used
 -   [React](https://react.dev/) - The library used
+-   [TailwindCSS](https://tailwindcss.com/) - CSS framework
+-   [Framer Motion](https://www.framer.com/motion/) - Animation library
 -   [shadcn](https://ui.shadcn.com/) - Components library
 
 ## 📞 Support
-
-For support and questions:
 
 -   📧 Email: yuxipersonal@gmail.com
